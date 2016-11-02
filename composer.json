@@ -1,0 +1,21 @@
+{
+    "name": "rapidwebltd/simplemailchimp",
+    "description": "SimpleMailChimp is an v3 API wrapper that aims to simplify integration of basic MailChimp functionality.",
+    "license": "LGPL3",
+    "keywords": [
+        "MailChimp",
+        "MailChimp library",
+        "library",
+        "PHP library",
+        "PHP MailChimp library"
+      ],
+    "require": {
+        "php": ">=5.6.0",
+        "drewm/mailchimp-api": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RapidWeb\\SimpleMailChimp\\": "./src/"
+        }
+    }
+}
