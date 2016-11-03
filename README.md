@@ -54,7 +54,7 @@ If successful it will return an array containing the subscriber's data.
 
 ### Checking to see if a subscriber is already on a list and subscribed
 
-To see if a subscriber is already on a list and is subscribed call the `isSubscribedToList` and pass through the mailchimp list id and the users email.
+To see if a subscriber is already on a list and is subscribed call the `isSubscribedToList` function and pass through the mailchimp list id and the users email.
 
 ```php
 $simpleMailChimp->isSubscribedToList('LIST_ID_GOES_HERE', 'example@example.com');
@@ -62,6 +62,21 @@ $simpleMailChimp->isSubscribedToList('LIST_ID_GOES_HERE', 'example@example.com')
 
 This function will return TRUE if the subscriber is found on the list AND is subscribed to it and return FALSE if either the user is not found on the list OR is in the list but set to unsubscribed.
 
+### Getting all the members of a list
 
+To get all the members of a list call the `getAllUsersInList` function and pass through the mailchimp list id and a comma separated list of the specific fields you want to return, if no params are set it retrieves the members email by default.
 
+```php
+$simpleMailChimp->getAllUsersInList('LIST_ID_GOES_HERE');
+```
+Will return an array of emails belonging to members of the list specified.
+
+```php
+$simpleMailChimp->getAllUsersInList('LIST_ID_GOES_HERE','email_address,status');
+```
+Will return an array of emails and the relevant statuses belonging to members of the list specified.
+Available parameters can be found on the mailchimp API documentation page (under 'Response body parameters' -> 'members' -> 'Show properties'):
+http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#read-get_lists_list_id_members. 
+
+Note that this function returns all members of a list regardless of whether they are subscribed or not.
 
