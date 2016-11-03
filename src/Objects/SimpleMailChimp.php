@@ -53,4 +53,11 @@ class SimpleMailChimp
         return false;
     }
 
+    public function getAllUsersInList($listId)
+    {
+      $result = $this->client->get('lists/'.$listId.'/members/');
+
+      return $result;
+    }
+
 }
