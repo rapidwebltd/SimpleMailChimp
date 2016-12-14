@@ -95,4 +95,20 @@ class SimpleMailChimp
       return $result;
     }
 
+    public function subscribeWithInterests($listId, $email,$interestList = array())
+    {
+     $subscriber = $this->subscribe($listId, $email);
+     $subscriberHash = $this->subscriberHash($email);
+     
+     $subscribeToInterests = array();
+     foreach($interestList as $interest){
+         $subscribeToInterests[$interest] = true;
+
+     }
+     $addInterests = $this->client->patch('lists/'.$listId.'/members/'.$subscriberHash ,['interests' => $subscribeToInterests]);
+     
+
+     return $addInterests;
+    }
+
 }
