@@ -53,7 +53,12 @@ class SimpleMailChimp
         return false;
     }
 
-    public function getAllUsersInList($listId, $params = 'email_address', $status = 'subscribed')
+    public function getAllSubscribersInList($listId, $params = 'email_address')
+    {
+        return $this->getAllUsersInList($listId, $params, 'subscribed');
+    }
+
+    public function getAllUsersInList($listId, $params = 'email_address', $status = null)
     {
       $getListSize = $this->client->get('lists/'.$listId.'/members/');
       $listSize = $getListSize['total_items'];
