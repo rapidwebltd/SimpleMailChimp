@@ -53,7 +53,7 @@ class SimpleMailChimp
         return false;
     }
 
-    public function getAllUsersInList($listId, $params = 'email_address')
+    public function getAllUsersInList($listId, $params = 'email_address', $status = 'subscribed')
     {
       $getListSize = $this->client->get('lists/'.$listId.'/members/');
       $listSize = $getListSize['total_items'];
@@ -76,14 +76,14 @@ class SimpleMailChimp
 
       while($i <= $pageCount){
           if($i == 0){
-             $getUsers = $this->client->get('lists/'.$listId.'/members/', ['count' => $count,'fields' => $paramString]); 
+             $getUsers = $this->client->get('lists/'.$listId.'/members/', ['count' => $count,'fields' => $paramString, 'status' => $status]); 
              foreach($getUsers['members'] as $member){
                  $result[] = $member;
              }
           }
           else{
               $offset = ($count * $i);
-              $getUsers = $this->client->get('lists/'.$listId.'/members/', ['count' => $count,'offset' => $offset,'fields' => $paramString]);
+              $getUsers = $this->client->get('lists/'.$listId.'/members/', ['count' => $count,'offset' => $offset,'fields' => $paramString, 'status' => $status]);
               foreach($getUsers['members'] as $member){
                  $result[] = $member;
              }  
