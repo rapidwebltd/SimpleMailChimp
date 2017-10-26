@@ -3,16 +3,12 @@
 SimpleMailChimp is a simplified wrapper for the "drewm mailchimp-api". It aims to further simplify basic MailChimp functionality.
 
 ## Installation
-First, change your composer.json file to include the `rapidwebltd/simplemailchimp` package as shown below.
 
-```json
-{
-    "require": {
-       "rapidwebltd/simplemailchimp": "1.*"
-    }
-}
+To install this package, just use composer.
+
 ```
-Then just run composer update to download/install SimpleMailChimp and create relevant autoload files.
+composer require rapidwebltd/simplemailchimp
+```
 
 If your framework does not already do so, you must add require_once "vendor/autoload.php" to any files in which you wish to use SimpleMailChimp.
 
