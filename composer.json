@@ -1,7 +1,7 @@
 {
     "name": "rapidwebltd/simplemailchimp",
     "description": "A simple MailChimp API wrapper, SimpleMailChimp makes it easy to pass data back and forth between your website and your MailChimp account. This includes subscribing or unsubscribing users, getting a subscriber’s details and getting all the members of a particular list.",
-    "license": "LGPL3",
+    "license": "LGPL-3.0-only",
     "keywords": [
         "MailChimp",
         "MailChimp library",
