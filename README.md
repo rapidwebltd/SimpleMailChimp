@@ -10,7 +10,7 @@ To install this package, just use composer.
 composer require rapidwebltd/simplemailchimp
 ```
 
-If your framework does not already do so, you must add require_once "vendor/autoload.php" to any files in which you wish to use SimpleMailChimp.
+If your framework does not already do so, you must add `require_once "vendor/autoload.php"` to any files in which you wish to use SimpleMailChimp.
 
 ## Getting Started
 
