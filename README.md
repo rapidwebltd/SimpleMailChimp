@@ -1,6 +1,8 @@
-# SimpleMailChimp
+# 🐵 SimpleMailChimp
 
-SimpleMailChimp is a simplified wrapper for the "drewm mailchimp-api". It aims to further simplify basic MailChimp functionality.
+SimpleMailChimp is a simplified wrapper for commobn MailChimp functionality.
+
+<img src="assets/images/simple-mailchimp-usage.png" alt="Simple MailChimp usage" />
 
 ## Installation
 
@@ -14,7 +16,7 @@ If your framework does not already do so, you must add `require_once "vendor/aut
 
 ## Getting Started
 
-In order to create the Object that will be used to communicate with the "drewm mailchimp-api" call the `getByAPIKey` function from the `SimpleMailChimpFactory` and pass it your API key.
+In order to create a `SimpleMailChimp` object, call the `getByAPIKey` function from the `SimpleMailChimpFactory` and pass it your API key.
 ```php
 $simpleMailChimp = SimpleMailChimpFactory::getByAPIKey('API_KEY_GOES_HERE');
 ```
