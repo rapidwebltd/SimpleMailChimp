@@ -1,6 +1,6 @@
 # 🐵 SimpleMailChimp
 
-SimpleMailChimp is a simplified wrapper for commobn MailChimp functionality.
+SimpleMailChimp is a simplified wrapper for common MailChimp functionality.
 
 <img src="assets/images/simple-mailchimp-usage.png" alt="Simple MailChimp usage" />
 
